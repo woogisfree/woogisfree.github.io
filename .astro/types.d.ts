@@ -185,13 +185,6 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
-"Softeer-Lv2--.mdx": {
-	id: "Softeer-Lv2--.mdx";
-  slug: "softeer-lv2--";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] };
 "astro copy 2.mdx": {
 	id: "astro copy 2.mdx";
   slug: "astro-copy-2";
@@ -223,6 +216,41 @@ declare module 'astro:content' {
 "create-astro-component.mdx": {
 	id: "create-astro-component.mdx";
   slug: "create-astro-component";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"lv2_briquette_radius.mdx": {
+	id: "lv2_briquette_radius.mdx";
+  slug: "lv2_briquette_radius";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"lv2_conference_room_reservation.mdx": {
+	id: "lv2_conference_room_reservation.mdx";
+  slug: "lv2_conference_room_reservation";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"lv2_electronic_signboard.mdx": {
+	id: "lv2_electronic_signboard.mdx";
+  slug: "lv2_electronic_signboard";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"lv2_obstacle_recognition_program.mdx": {
+	id: "lv2_obstacle_recognition_program.mdx";
+  slug: "lv2_obstacle_recognition_program";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"lv2_tree_attack.mdx": {
+	id: "lv2_tree_attack.mdx";
+  slug: "lv2_tree_attack";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">

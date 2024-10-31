@@ -1,0 +1,92 @@
+---
+heroImage: /src/assets/images/Softeer/lv2_briquette_radius.png
+category: Algorithm
+description: Softeer Lv.2 연탄의 크기 풀이입니다.
+pubDate: 2024-10-30T15:00:00.000Z
+tags:
+  - Algorithm
+title: Softeer Lv.2 연탄의 크기
+---
+
+문제 : [https://softeer.ai/practice/7628](https://softeer.ai/practice/7628)
+
+**첫 번째 풀이**
+
+```java
+import java.io.*;
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int[] radius = new int[n];
+        for (int i = 0; i < n; i++) {
+            radius[i] = Integer.parseInt(st.nextToken());
+        }
+
+        int maxHouseCount = Integer.MIN_VALUE;
+        for (int i = 2; i <= 100; i++) {
+            int count = 0;
+            for (int j = 0; j < n; j++) {
+                if (radius[j] % i == 0) count++;
+            }
+            if (maxHouseCount < count) maxHouseCount = count;
+        }
+        System.out.println(maxHouseCount);
+    }
+}
+```
+
+문제에서 주어진 제약조건은 다음과 같습니다.
+
+* 1 \<= n \<= 100
+* 2 \<= 난로의 반지름의 길이 \<= 100
+
+그래서 모든 경우의 수를 체크해도 시간초과가 나지 않을 것이라 판단했고, 완전탐색으로 문제를 풀었습니다. 하지만 시간초과가 나는 경우를 대비해 성능을 개선할 수 있는 포인트를 찾아봤습니다.
+
+**두 번째 풀이**
+
+```java
+import java.io.*;
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int[] radius = new int[n];
+        
+        for (int i = 0; i < n; i++) {
+            radius[i] = Integer.parseInt(st.nextToken());
+        }
+
+        // 각 약수가 사용 가능한 집의 수를 카운트
+        Map<Integer, Integer> divisorCount = new HashMap<>();
+
+        for (int r : radius) {
+            // 각 난로 반지름의 약수를 찾고 카운트 증가
+            for (int i = 2; i * i <= r; i++) {
+                if (r % i == 0) {
+                    divisorCount.put(i, divisorCount.getOrDefault(i, 0) + 1);
+                    if (i != r / i) {  // i와 r / i가 다른 경우에도 약수로 추가
+                        divisorCount.put(r / i, divisorCount.getOrDefault(r / i, 0) + 1);
+                    }
+                }
+            }
+            // 자기 자신도 약수에 포함 (반지름 r인 연탄이 직접 사용 가능한 경우)
+            divisorCount.put(r, divisorCount.getOrDefault(r, 0) + 1);
+        }
+
+        int maxHouseCount = 0;
+        for (int count : divisorCount.values()) {
+            maxHouseCount = Math.max(maxHouseCount, count);
+        }
+        System.out.println(maxHouseCount);
+    }
+}
+```
+
+모든 값을 검사하는 대신, 각 난로 반지름의 약수만 검사하였고, HashMap 을 사용하여 각 약수별로 사용 가능한 집 수를 카운트해서 효율적으로 계산했습니다.

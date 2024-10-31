@@ -1,0 +1,99 @@
+---
+heroImage: /src/assets/images/book.jpg
+category: Algorithm
+description: Softeer Lv.2 회의실 예약 풀이입니다.
+pubDate: 2024-10-30T15:00:00.000Z
+tags:
+  - Softeer
+  - Algorithm
+title: Softeer Lv.2 회의실 예약
+---
+
+문제 : [https://softeer.ai/practice/6266](https://softeer.ai/practice/6266)
+
+```java
+import java.io.*;
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        // 첫 줄에서 회의실 개수 N과 예약 개수 M을 입력받음
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int N = Integer.parseInt(st.nextToken());
+        int M = Integer.parseInt(st.nextToken());
+
+        // 회의실 이름과 예약 정보를 저장할 Map 선언
+        Map<String, List<int[]>> conferenceSchedule = new HashMap<>();
+        
+        // 회의실 이름을 입력받아 Map에 추가
+        for (int i = 0; i < N; i++) {
+            conferenceSchedule.put(br.readLine(), new ArrayList<>());
+        }
+
+        // 각 예약 정보를 읽어와서 해당 회의실에 추가
+        for (int i = 0; i < M; i++) {
+            st = new StringTokenizer(br.readLine());
+            String roomName = st.nextToken();
+            int startTime = Integer.parseInt(st.nextToken());
+            int endTime = Integer.parseInt(st.nextToken());
+            conferenceSchedule.get(roomName).add(new int[]{startTime, endTime});
+        }
+
+        // 회의실 이름을 알파벳 순으로 정렬
+        List<String> roomNames = new ArrayList<>(conferenceSchedule.keySet());
+        Collections.sort(roomNames);
+
+        StringBuilder result = new StringBuilder();
+        
+        // 각 회의실의 예약 정보를 처리하여 결과 생성
+        for (int i = 0; i < roomNames.size(); i++) {
+            String roomName = roomNames.get(i);
+            result.append("Room ").append(roomName).append(":\n");
+            
+            // 해당 회의실의 예약 시간을 시작 시간 기준으로 정렬
+            List<int[]> schedules = conferenceSchedule.get(roomName);
+            schedules.sort(Comparator.comparingInt(a -> a[0]));
+
+            // 비어있는 시간대를 저장할 리스트
+            List<String> availableTimes = new ArrayList<>();
+            int currentTime = 9; // 회의실 운영 시작 시간
+
+            // 예약 간 비어있는 시간대를 계산
+            for (int[] schedule : schedules) {
+                int start = schedule[0];
+                int end = schedule[1];
+
+                // 현재 시간부터 다음 예약 시작 시간 사이가 비어있는 시간대
+                if (currentTime < start) {
+                    availableTimes.add(formatTime(currentTime) + "-" + formatTime(start));
+                }
+                // 현재 시간을 예약의 끝 시간으로 갱신
+                currentTime = Math.max(currentTime, end);
+            }
+            // 마지막 회의 이후 남아있는 비어있는 시간대를 추가
+            if (currentTime < 18) availableTimes.add(formatTime(currentTime) + "-18");
+
+            // 예약이 꽉 찬 경우와 비어있는 시간대가 있는 경우를 구분하여 출력
+            if (availableTimes.isEmpty()) {
+                result.append("Not available\n");
+            } else {
+                result.append(availableTimes.size()).append(" available:\n");
+                for (String time : availableTimes) {
+                    result.append(time).append("\n");
+                }
+            }
+            // 마지막 회의실이 아닌 경우에만 구분선 추가
+            if (i < roomNames.size() - 1) result.append("-----\n");
+        }
+        // 결과 출력
+        System.out.println(result.toString());
+    }
+
+    // 시간을 "09", "10" 형식으로 반환하는 메서드
+    private static String formatTime(int time) {
+        return String.format("%02d", time);
+    }
+}
+```
