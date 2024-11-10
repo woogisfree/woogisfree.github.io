@@ -1,9 +1,9 @@
 ---
-title: 'Database'
+title: 'Projects'
 layout: category
-permalink: /categories/database/
+permalink: /categories/projects/
 author_profile: true
-taxonomy: Database
+taxonomy: Projects
 sidebar:
   nav: 'categories'
 ---
