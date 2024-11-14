@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59845f28-8469-4d06-b7ff-e76fe5012544" name="Changes" comment="">
+    <list default="true" id="59845f28-8469-4d06-b7ff-e76fe5012544" name="Changes" comment="feat: update profile image">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2024-11-14-performance-optimization-parallel-stream.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2024-11-14-performance-optimization-parallel-stream.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/author-profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/author-profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,8 +79,17 @@
       <option name="presentableId" value="Default" />
       <updated>1731055744290</updated>
       <workItem from="1731055747391" duration="2583000" />
-      <workItem from="1731576538005" duration="4573000" />
+      <workItem from="1731576538005" duration="5044000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: update profile image">
+      <option name="closed" value="true" />
+      <created>1731586278240</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731586278240</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,5 +105,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: update profile image" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: update profile image" />
   </component>
 </project>
