@@ -18,10 +18,10 @@ main:
 # sidebar navigation (categories)
 # 2022.02.15 sidebar update : simple ver.
 categories:
+  - title: 'Performance Optimization'
+    url: /categories/performance-optimization/
   - title: 'Algorithm'
     url: /categories/algorithm/
-  - title: 'Projects'
-    url: /categories/projects/
   - title: 'Categories3'
     url: /categories/categories3/
   - title: 'Categories4'
