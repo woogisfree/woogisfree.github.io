@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59845f28-8469-4d06-b7ff-e76fe5012544" name="Changes" comment="feat: update profile image">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2024-11-14-performance-optimization-parallel-stream.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2024-11-14-performance-optimization-parallel-stream.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/patrickstar.png" beforeDir="false" />
-    </list>
+    <list default="true" id="59845f28-8469-4d06-b7ff-e76fe5012544" name="Changes" comment="feat: update profile image" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +71,7 @@
       <updated>1731055744290</updated>
       <workItem from="1731055747391" duration="2583000" />
       <workItem from="1731576538005" duration="5814000" />
-      <workItem from="1731631636742" duration="749000" />
+      <workItem from="1731631636742" duration="1049000" />
     </task>
     <task id="LOCAL-00001" summary="feat: update profile image">
       <option name="closed" value="true" />

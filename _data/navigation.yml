@@ -18,11 +18,13 @@ main:
 # sidebar navigation (categories)
 # 2022.02.15 sidebar update : simple ver.
 categories:
-  - title: 'Performance Optimization'
-    url: /categories/performance-optimization/
+  - title: 'Java'
+    url: /categories/java/
+  - title: 'Spring'
+    url: /categories/spring/
   - title: 'Algorithm'
     url: /categories/algorithm/
-  - title: 'Categories3'
-    url: /categories/categories3/
-  - title: 'Categories4'
-    url: /categories/categories4/
+  - title: 'Performance Optimization'
+    url: /categories/performance-optimization/
+
+
