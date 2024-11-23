@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59845f28-8469-4d06-b7ff-e76fe5012544" name="Changes" comment="feat: update profile image" />
+    <list default="true" id="59845f28-8469-4d06-b7ff-e76fe5012544" name="Changes" comment="feat: update profile image">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_pages/categories/category-categories3.md" beforeDir="false" afterPath="$PROJECT_DIR$/_pages/categories/category-java.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_pages/categories/category-categories4.md" beforeDir="false" afterPath="$PROJECT_DIR$/_pages/categories/category-spring.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,6 +76,8 @@
       <workItem from="1731055747391" duration="2583000" />
       <workItem from="1731576538005" duration="5814000" />
       <workItem from="1731631636742" duration="1049000" />
+      <workItem from="1731727409230" duration="3426000" />
+      <workItem from="1732266262128" duration="4034000" />
     </task>
     <task id="LOCAL-00001" summary="feat: update profile image">
       <option name="closed" value="true" />
