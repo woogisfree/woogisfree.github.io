@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59845f28-8469-4d06-b7ff-e76fe5012544" name="Changes" comment="feat: update profile image">
-      <change beforePath="$PROJECT_DIR$/_posts/2024-11-22-spring-dto-location.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2024-11-22-spring-dto-location.md" afterDir="false" />
-    </list>
+    <list default="true" id="59845f28-8469-4d06-b7ff-e76fe5012544" name="Changes" comment="feat: update profile image" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,7 +77,7 @@
       <workItem from="1731576538005" duration="5814000" />
       <workItem from="1731631636742" duration="1049000" />
       <workItem from="1731727409230" duration="3426000" />
-      <workItem from="1732266262128" duration="4928000" />
+      <workItem from="1732266262128" duration="5086000" />
     </task>
     <task id="LOCAL-00001" summary="feat: update profile image">
       <option name="closed" value="true" />
